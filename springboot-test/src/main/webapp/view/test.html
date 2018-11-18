@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>这是我的小测试</h1>
+	<table with=30px>
+		<tr class="tr1">
+			<th>id</th>
+			<th>名字</th>
+			<th>年龄</th>
+			<th>性别</th>
+		</tr>
+	</table>
+	<input class="button1" type="button" value="按钮"/>
+	<div id="div1"></div>
+</body>
+<script src="/jquery-1.4.2.js" ></script>
+<script type="text/javascript">
+$(function(){
+	alert("一个验证弹框");
+	$("table").append("<tr><td>这是新加的</td><td>这是新加的</td><td>这是新加的</td><td>这是新加的</td>s</tr>");
+	$(".button1").click(function(){
+		$.ajax({url:"http://localhost:8090/index",success:function(result){
+		  for (var i = 0; i < result.length; i++) {
+			
+			var $td1=$("<td>"+result[i].id+"</td>");
+			var $td2=$("<td>"+result[i].name+"</td>");
+			var $td3=$("<td>"+result[i].age+"</td>");
+			var $td4=$("<td>"+result[i].sex+"</td>");
+			var $tr=$("<tr></tr>");
+			$tr.append($td1).append($td2).append($td3).append($td4);
+			$("table").append($tr);
+			
+		}
+			// $("#div1").html( JSON.stringify(result));
+		    }});
+	});
+})
+
+</script>
+</html>
