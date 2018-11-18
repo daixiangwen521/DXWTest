@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: springcloud-server
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: dai
+Implementation-Vendor-Id: springcloud-test
+Build-Jdk: 1.8.0_171
+Implementation-URL: http://projects.spring.io/spring-boot/springcloud-
+ server/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
